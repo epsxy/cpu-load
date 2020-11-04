@@ -1,0 +1,40 @@
+{
+    "name": "root",
+    "private": true,
+    "devDependencies": {
+        "lerna": "^3.16.4",
+        "prettier": "^2.1.2"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged"
+        }
+    },
+    "scripts": {
+        "build": "yarn workspace client run build && yarn workspace server run build",
+        "demo": "yarn workspace server run start:demo",
+        "deploy": "yarn workspace server run start:prod"
+    },
+    "workspaces": {
+        "packages": [
+            "client",
+            "server"
+        ],
+        "nohoist": [
+            "**/@types/jasmine",
+            "**/@types/jasmine/**",
+            "**/@types/jasminewd2",
+            "**/@types/jasminewd2/**",
+            "**/@types/jest",
+            "**/jest",
+            "**/jest*",
+            "**/jest/**",
+            "**/react-native",
+            "**/react-native/**"
+        ]
+    },
+    "version": "1.0.0",
+    "repository": "git@github.com:epsxy/cpu-load.git",
+    "author": "epsxy <epsxy@users.noreply.github.com>",
+    "license": "MIT"
+}

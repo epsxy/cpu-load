@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: ForcedSquare;
+  src: url(./fonts/ForcedSquare.ttf)  format('truetype');
+}
+
+/* notification css override */
+.notification-parent > div {
+  border: 2px solid black;
+  font-family: 'ForcedSquare';
+}
+
+.notification-success {
+  background-color: lightblue;
+}
+
+.notification-success .notification-title,
+.notification-success .notification-message {
+  color: black;
+}
+
+.notification-danger {
+  background-color: indianred;
+}
+
+.notification-title {
+  font-size: 2em !important;
+}
+
+.notification-message {
+  font-size: 1em !important;
+}
+
+.notification-content .timer {
+  background-color: black !important;
+}
