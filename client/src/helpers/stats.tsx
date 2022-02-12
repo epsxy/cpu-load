@@ -10,7 +10,10 @@ export const isContinuingHeavyState = (previous: LoadEntry, current: LoadEntry):
     return previous.state === LoadType.HIGH && current.state === LoadType.HIGH;
 };
 
-export const isHeavyStateAfterRecoveringFailed = (previous: LoadEntry, current: LoadEntry): boolean => {
+export const isHeavyStateAfterRecoveringFailed = (
+    previous: LoadEntry,
+    current: LoadEntry,
+): boolean => {
     return previous.state === LoadType.RECOVERING && current.state === LoadType.HIGH;
 };
 
